@@ -38,7 +38,7 @@ public class Projecte {
             System.out.println("5) Llistar Jugadors");
             System.out.println("Opció:");
         
-            menu=entrada.next().charAt(0);
+            menu=entrada.nextLine().charAt(0);
             
             if (menu == 1) {
                 break;
