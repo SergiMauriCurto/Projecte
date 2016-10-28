@@ -6,6 +6,7 @@
 package projecte;
 
 import java.util.Scanner;
+import java.lang.StringIndexOutOfBoundsException;
 
 /**
  *
@@ -25,6 +26,7 @@ public class Projecte {
         String posicio =null;
         double sou =0;
         Boolean sexe =false;
+        char esHome=' ';
         int menu=0;
         
         while (menu != 1) {
@@ -50,6 +52,22 @@ public class Projecte {
                     break;
                 case '2':
                     System.out.println("Has escollit la opció de afegir un jugador:");
+                    System.out.println("Introduccio de dades del Jugador:");
+                    System.out.println("Nom:");
+                    nom=entrada.nextLine();
+                    System.out.println("Dorsal:");
+                    dorsal=entrada.nextInt();
+                    System.out.println("Posició:");
+                    posicio=entrada.nextLine();
+                    System.out.println("Sou:");
+                    sou=entrada.nextInt();
+                    System.out.println("És home o dona?(H/D):");
+                    do{
+                        esHome = entrada.nextLine().toUpperCase().charAt(0);        
+                                                                                           
+                    }while(esHome != 'H' && esHome != 'D');
+                        sexe = (esHome == 'H');
+                    System.out.println("Dades introduides correctament!");
                     break;
                 case '3':
                     System.out.println("Has escollit la opció de borrar un jugador:");
