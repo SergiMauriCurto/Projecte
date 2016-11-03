@@ -61,7 +61,7 @@ public class Projecte {
                         } else {
                             System.out.println("La llista ja esta plena, borra el jugador per poder introduir-ne un de nou");
                         }
-                       
+                    
                     System.out.println("Dorsal:");
                     dorsal=entrada.skip("[\r\n]*").nextInt();
                     System.out.println("Posició:");
@@ -69,7 +69,6 @@ public class Projecte {
                     System.out.println("Sou:");
                     sou=entrada.nextInt();
                     System.out.println("És home o dona?(H/D):");
-                  
                         do{
                             esHome = entrada.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);        
                                                                                            
