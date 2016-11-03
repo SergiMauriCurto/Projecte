@@ -25,9 +25,10 @@ public class Projecte {
         int dorsal =0;
         String posicio =null;
         double sou =0;
-        Boolean sexe =false;
+        boolean sexe =false;
         char esHome=' ';
         int menu=0;
+        boolean omplit = true;
         
         while (menu != 1) {
         
@@ -55,6 +56,12 @@ public class Projecte {
                     System.out.println("Introduccio de dades del Jugador:");
                     System.out.println("Nom:");
                     nom=entrada.nextLine();
+                        if(omplit == false) {
+                            System.out.println("");
+                        } else {
+                            System.out.println("La llista ja esta plena, borra el jugador per poder introduir-ne un de nou");
+                        }
+                       
                     System.out.println("Dorsal:");
                     dorsal=entrada.skip("[\r\n]*").nextInt();
                     System.out.println("Posició:");
