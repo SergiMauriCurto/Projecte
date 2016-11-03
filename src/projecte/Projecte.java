@@ -6,7 +6,7 @@
 package projecte;
 
 import java.util.Scanner;
-import java.lang.StringIndexOutOfBoundsException;
+import java.util.InputMismatchException;
 
 /**
  *
@@ -56,21 +56,24 @@ public class Projecte {
                     System.out.println("Nom:");
                     nom=entrada.nextLine();
                     System.out.println("Dorsal:");
-                    dorsal=entrada.nextInt();
+                    dorsal=entrada.skip("[\r\n]*").nextInt();
                     System.out.println("Posició:");
-                    posicio=entrada.nextLine();
+                    posicio=entrada.skip("[\r\n]*").nextLine();
                     System.out.println("Sou:");
                     sou=entrada.nextInt();
                     System.out.println("És home o dona?(H/D):");
-                    do{
-                        esHome = entrada.nextLine().toUpperCase().charAt(0);        
+                  
+                        do{
+                            esHome = entrada.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);        
                                                                                            
-                    }while(esHome != 'H' && esHome != 'D');
-                        sexe = (esHome == 'H');
+                        }while(esHome != 'H' && esHome != 'D');
+                            sexe = (esHome == 'H');
                     System.out.println("Dades introduides correctament!");
                     break;
                 case '3':
                     System.out.println("Has escollit la opció de borrar un jugador:");
+                    System.out.println("Quin jugador vol borrar?");
+                    nom=entrada.nextLine();
                     break;
                 case '4':
                     System.out.println("Has escollit la opció de modificar un jugador:");
