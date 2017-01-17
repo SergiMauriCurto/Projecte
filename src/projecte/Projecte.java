@@ -6,8 +6,7 @@
 package projecte;
 
 import java.util.Scanner;
-import java.util.InputMismatchException;
-
+import java.lang.RuntimeException;
 /**
  *
  * @author alumne
@@ -29,6 +28,7 @@ public class Projecte {
         char esHome=' ';
         int menu=0;
         boolean omplit = true;
+        char opcio = ' ';
         
         while (menu != 1) {
         
@@ -60,6 +60,7 @@ public class Projecte {
                             System.out.println("");
                         } else {
                             System.out.println("La llista ja esta plena, borra el jugador per poder introduir-ne un de nou");
+                            break;
                         }
                     
                     System.out.println("Dorsal:");
@@ -78,20 +79,61 @@ public class Projecte {
                     break;
                 case '3':
                     System.out.println("Has escollit la opció de borrar un jugador:");
-                    System.out.println("Quin jugador vol borrar?");
-                    nom=entrada.nextLine();
+                    System.out.println("Esta segur que vol esborrar el jugador?(S/N)");
+                    do{
+                            esHome = entrada.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);        
+                                                                                           
+                        }while(esHome != 'S' && esHome != 'N');
+                            sexe = (esHome == 'S');
+                            
+                    System.out.println("El jugador s'ha esborrat correctament");
                     break;
                 case '4':
                     System.out.println("Has escollit la opció de modificar un jugador:");
                     break;
                 case '5':
                     System.out.println("Has escollit la opció de llistar un jugador:");
-                    break;
-                default:
+                    if (omplit == true) {
+                        System.out.println("Vols veure les dades del jugador? S/N");
+                        opcio = entrada.next().charAt(0);
+                    }
+                    if (omplit == false) {
+                        System.out.println("No hi ha ningun jugador a mostrar");
+                                }
+                     do {
+                            switch (opcio) {
+                                case 'S':
+                                    System.out.println("Nom:" + nom);
+                                    System.out.println("Dorsal:" + dorsal);
+                                    System.out.println("Posició:" + posicio);
+                                    System.out.println("Sou:" + sou);
+                                    System.out.println("Sexe:" + sexe);
+                                   
+                                    opcio = 'N';
+                                    break;
+                                case 'N':
+                                    System.out.println("");
+                                    break;
+
+                                default:
+                                    System.out.println("L'opcio no es valida");
+                                    System.out.println("Vols veure les dades del jugador? S/N");
+                                    opcio = entrada.next().charAt(0);
+                                    break;
+                            }
+             
+                            default:
                     System.out.println("No és una opció del menu!");
                     break;
                     
+                }
             }
         }
     }
 }
+
+                    
+
+                    
+        
+    
