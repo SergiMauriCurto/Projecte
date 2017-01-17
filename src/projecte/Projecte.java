@@ -13,9 +13,12 @@ import java.lang.RuntimeException;
  */
 public class Projecte {
 
-    /**
-     * @param args the command line arguments
-     */
+    Jugador[] array=new Jugador[MAX_JUGADOR];
+    int i=0;
+    String s=new String('');
+    Jugador sergi=new Jugador();
+    array(0)
+    
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner entrada=new Scanner(System.in);
