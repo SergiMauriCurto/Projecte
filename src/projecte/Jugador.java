@@ -15,11 +15,11 @@ public class Jugador {
         private String nom =null;
         private int dorsal =0;
         private String posicio =null;
-        private double sou =0;
+        private double sou;
         private boolean sexe =false;
         private char esHome=' ';
         private int menu=0;
-        private boolean omplit = true;
+        private boolean omplit;
         private char opcio = ' ';
 
     public String getNom() {

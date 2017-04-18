@@ -6,12 +6,11 @@
 package projecte;
 
 import java.util.Scanner;
-import java.lang.RuntimeException;
 /**
  *
  * @author alumne
  */
-public class Projecte {
+public class ProjecteAntic {
 
     Jugador[] array=new Jugador[MAX_JUGADOR];
     int i=0;
@@ -65,7 +64,7 @@ public class Projecte {
                             System.out.println("La llista ja esta plena, borra el jugador per poder introduir-ne un de nou");
                             break;
                         }
-                    
+                  
                     System.out.println("Dorsal:");
                     dorsal=entrada.skip("[\r\n]*").nextInt();
                     System.out.println("Posició:");
@@ -107,7 +106,6 @@ public class Projecte {
                             switch (opcio) {
                                 case 'S':
                                     System.out.println("Nom:" + nom);
-                                    System.out.println("Dorsal:" + dorsal);
                                     System.out.println("Posició:" + posicio);
                                     System.out.println("Sou:" + sou);
                                     System.out.println("Sexe:" + sexe);
