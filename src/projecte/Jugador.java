@@ -5,11 +5,13 @@
  */
 package projecte;
 
+import java.io.Serializable;
+
 /**
  *
  * @author alumne
  */
-public class Jugador {
+public class Jugador implements Serializable{
    
     
         private String nom =null;

@@ -36,9 +36,6 @@ public class GUI extends javax.swing.JFrame {
         
         GUI.carregaTaula(new String[]{"Fila", "Nom", "Dorsal", "Diners", "Home"}, 
                 transformaDades(ProjecteJava.getArray())
-//                new Object[][]{
-//                    {"Marc", 93, 2346.6, true},
-//                    {"Viñales", 25, 234.6, true}
 //                }
                 , taulaJugadors);
     
@@ -134,41 +131,44 @@ public class GUI extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(129, 129, 129)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 446, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(129, 129, 129)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 446, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(botoBorrar)
-                            .addComponent(botoModificar)
-                            .addComponent(botoInsertar))
-                        .addGap(45, 45, 45))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(botoSortir)
-                        .addContainerGap())))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(133, 133, 133)
+                                .addComponent(botoSortir))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(32, 32, 32)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(botoModificar)
+                                    .addComponent(botoInsertar)
+                                    .addComponent(botoBorrar))))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 164, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
                         .addComponent(botoInsertar)
-                        .addGap(40, 40, 40)
-                        .addComponent(botoModificar))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addGap(37, 37, 37)
-                .addComponent(botoBorrar)
-                .addGap(70, 70, 70)
-                .addComponent(botoSortir)
+                        .addGap(60, 60, 60)
+                        .addComponent(botoModificar)
+                        .addGap(57, 57, 57)
+                        .addComponent(botoBorrar)
+                        .addGap(112, 112, 112)
+                        .addComponent(botoSortir))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -199,7 +199,7 @@ public class GUI extends javax.swing.JFrame {
         
         GUI.carregaTaula(new String[]{"Fila", "Nom", "Dorsal", "Diners", "Home"}, 
                 transformaDades(ProjecteJava.getArray())
-                , taula);
+                , taulaJugadors);
         JOptionPane.showMessageDialog(this, "Dades modificades!!");
     }//GEN-LAST:event_botoModificarActionPerformed
 
